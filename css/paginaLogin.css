@@ -1,0 +1,76 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: rgb(88, 89, 123);
+        }
+        
+        .inputForm{
+            margin-bottom: 7px;
+            padding: auto;
+        }
+
+        .textoLogin {
+            font-size: 3em;
+            margin-bottom: 1em;
+            display: block;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 120px); /* Ajusta a altura considerando header e footer */
+            background-color: #f4f4f4;
+        }
+        form {
+            background: white;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 600px;      /* largura dobrada */
+            height: 400px;     /* altura dobrada */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 1em 0.5em; /* aumenta altura interna */
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 0.7em;
+            border: none;
+            border-radius: 3px;
+            background-color: #1880ff;
+            color: white;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #0159c4;
+        }
+        .email, .password {
+            padding: 100px;
+        }
+
+        .cadastrar {
+            display: block;
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        .linkcadastro {
+            margin-left: 5px;
+            color: blue;
+            text-decoration: none;
+        }
