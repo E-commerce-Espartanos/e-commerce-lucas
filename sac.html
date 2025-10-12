@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Central de ajuda</title>
+   <link rel="stylesheet" href="/css/style.css">
+   <head>
+
+   <body>
+      <nav>
+         <ul class="menu" type="none">
+            <li><a href="index.html"><img src="assets/img/logo.png" width="30px" alt=""></a></li>
+            <li><a href="index.html">produtos</a></li>
+            <li><a href="cadastra_produto.html">Cadastrar Produto</a></li>
+            <li><a href="avaliacao.html">avaliar</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="login.html">Logar</a></li>
+            <li><a href="criar_conta.html">Cadastrar</a></li>
+         </ul>
+      </nav>
+      <h1> Como podemos ajudar? </h1>
+
+      <form class="search-form">
+         <label for="faq-search" class="visually-hidden">Buscar na Central de Ajuda</label>
+         <input type="search" id="faq-search" name="search" placeholder="Pesquisar perguntas e artigos...">
+         <button type="submit">Buscar</button>
+      </form>
+
+      <h3>Perguntas frequentes</h3>
+
+      <details>
+         <summary>Oque esses produtos me oferecem de diferente do convencional?</summary>
+         <p></p>
+
+         <summary>como utilizar?</summary>
+         <p></p>
+
+         <summary>Onde usar?</summary>
+         <p></p>
+      </details>
+
+      <details>
+         <summary>Compra e entrega</summary>
+         <p></p>
+      </details>
+
+      <details>
+         <summary>Pos vendas</summary>
+         <p></p>
+      </details>
+
+      <form action="enviar ajuda" method="post" class="contato form">
+
+         <h2>Enviar duvida</h2>
+
+         <fieldset>
+            <div>
+               <label for="pergunta">Sua duvida— </label>
+               <textarea id="pergunta" name="pergunta" rows="4" required></textarea>
+               <br>
+               <label for="nome">Seu nome:</label>
+               <input type="text" id="nome" name="nome" required>
+               <br>
+               <label for="email"> Seu email:</label>
+               <input type="email" id="email" name="email" required>
+               <br>
+               <label for="número">Seu numero:</label>
+               <input type="número" id="número" name="número" required>
+            </div>
+         </fieldset>
+
+         <button type="submit">Enviar pergunta</button>
+
+      </form>
+
+      <h3>Precisa de ajuda imediata?</h3>
+      <footer>
+        <p>&copy; 2025 Lucas Imports. Todos os direitos reservados.</p>
+    </footer>
+   </body>
+</head>
