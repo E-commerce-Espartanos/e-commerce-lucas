@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação de Produtos Simples</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* CSS Básico e Mínimo */
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+         <ul class="menu" type="none">
+            <li><a href="index.html"><img src="assets/img/logo.png" width="30px" alt=""></a></li>
+            <li><a href="produto.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cadastra_produto.html">Cadastrar Produto</a></li>
+            <li><a href="">Logar</a></li>
+            <li><a href="avaliacao.html">avalições</a></li>
+            <li><a href="sac.html">SAC</a></li>
+            <li><a href="criar_conta.html">Cadastrar</a></li>
+         </ul>
+      </nav>
+    <h1>Avalie Nossos Produtos!</h1>
+    
+    <div class="produto">
+        <h2>Canetões Pilot V Board Master</h2>
+        <img src="canetoes.jpg" alt="Marcadores para Quadro Branco">
+        <p>Estes são os canetões com tinta líquida. As cores são fortes e vivas.</p>
+        
+        <div class="avaliacao-form">
+            <h3>Sua Avaliação para o Canetão</h3>
+            <form>
+                <label for="nome1">Seu Nome:</label>
+                <input type="text" id="nome1" name="nome" required>
+
+                <label for="nota1">Nota (de 1 a 5):</label>
+                <select id="nota1" name="nota" required>
+                    <option value="5">5 - Adorei!</option>
+                    <option value="4">4 - Muito bom</option>
+                    <option value="3">3 - Ok</option>
+                    <option value="2">2 - Poderia melhorar</option>
+                    <option value="1">1 - Ruim</option>
+                </select>
+
+                <label for="comentario1">Comentário Simples:</label>
+                <textarea id="comentario1" name="comentario" rows="3"></textarea>
+
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="produto">
+        <h2>Réguas Flexíveis com Ventosa</h2>
+        <img src="reguas.jpg" alt="Réguas de Professor">
+        <p>Réguas flexíveis e coloridas com ventosa para grudar no quadro branco. Ótimas para desenhar.</p>
+        
+        <div class="avaliacao-form">
+            <h3>Sua Avaliação para as Réguas</h3>
+            <form>
+                <label for="nome2">Seu Nome:</label>
+                <input type="text" id="nome2" name="nome" required>
+
+                <label for="nota2">Nota (de 1 a 5):</label>
+                <select id="nota2" name="nota" required>
+                    <option value="5">5 - Adorei!</option>
+                    <option value="4">4 - Muito bom</option>
+                    <option value="3">3 - Ok</option>
+                    <option value="2">2 - Poderia melhorar</option>
+                    <option value="1">1 - Ruim</option>
+                </select>
+
+                <label for="comentario2">Comentário Simples:</label>
+                <textarea id="comentario2" name="comentario" rows="3"></textarea>
+
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Lucas Imports. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
