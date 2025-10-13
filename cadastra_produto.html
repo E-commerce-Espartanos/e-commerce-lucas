@@ -10,8 +10,8 @@
 <body>
     <header>
         <nav>
-         <ul class="menu" type="none">
-            <li><a href="index.html"><img src="assets/img/logo.png" width="30px" alt=""></a></li>
+         <ul class="menu">
+            <li><a href="index.html"><img src="assets/img/logo.png" width="30" alt="Logo"></a></li>
             <li><a href="index.html">produtos</a></li>
             <li><a href="avaliacao.html">avaliar</a></li>
             <li><a href="sobre.html">Sobre</a></li>
@@ -20,33 +20,27 @@
             <li><a href="criar_conta.html">Cadastrar</a></li>
          </ul>
       </nav>
-
     </header>
 
     <main>
-
         <h1>Cadastre o seu produto</h1>
-
         <form action="" enctype="multipart/form-data">
-
             <label for="nomeProduto">Nome do Produto:</label>
             <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Ex: Régua Articulada - Preta" maxlength="100" required>
             <br>
 
             <label for="descricaoProduto">Descrição:</label>
             <br>
-
             <textarea id="descricaoProduto" name="descricaoProduto" rows="5" placeholder="Detalhes do produto" style="max-width: 500px; max-height: 200px;" required></textarea>
-
             <br>
 
             <label for="precoProduto">Preço:</label>
             <input type="number" id="precoProduto" name="precoProduto" step="0.01" min="1" placeholder="99.99" required>
-            
             <br>
 
             <label for="estoqueProduto">Estoque:</label>
             <input type="number" id="estoqueProduto" name="estoqueProduto" min="0" placeholder="Ex:10" required>
+            <br>
 
             <label for="categoriaProduto">Categoria:</label>
             <select id="categoriaProduto" name="categoriaProduto" required>
@@ -57,58 +51,45 @@
                 <option value="kits">Kits Escolares</option>
                 <option value="acessorios">Outros Acessórios</option>
             </select>
+            <br>
 
             <fieldset>
                 <legend>Cores Disponíveis</legend>
                 <input type="checkbox" id="corPreto" name="corProduto" value="Preto">
                 <label for="corPreto">Preto</label>
-                
                 <br>
-
                 <input type="checkbox" id="corAzul" name="corProduto" value="Azul">
                 <label for="corAzul">Azul</label>
-
                 <br>
-
             </fieldset>
 
             <label for="materialProduto">Material:</label>
             <input type="text" id="materialProduto" name="materialProduto" placeholder="Ex: Plástico" required>
-
             <br>
 
             <label for="dimensoesProduto">Dimensões:</label>
-            <input type="text" id="dimensoesProduto" name="dimensoesProduto" placeholder="30cm X 40cm">
-
+            <input type="text" id="dimensoesProduto" name="dimensoesProduto" placeholder="30cm X 40cm" required>
             <br>
 
             <label for="imagensProduto">Imagens do Produto:</label>
             <input type="file" id="imagensProduto" name="imagensProduto" accept="image/*" multiple required>
-
             <br>
 
-            <label for="skuProduto">Código:</label>
-            <input type="text" id="codProduto" name="codProduto" placeholder="Ex: 000111210">
+            <label for="codProduto">Código:</label>
+            <input type="text" id="codProduto" name="codProduto" placeholder="Ex: 000111210" required>
+            <br>
 
             <fieldset>
                 <legend>Status do Produto:</legend>
-
                 <input type="radio" id="statusAtivo" name="statusProduto" value="ativo" checked>
                 <label for="statusAtivo">Ativo</label>
-                
                 <br>
-
                 <input type="radio" id="statusInativo" name="statusProduto" value="inativo">
                 <label for="statusInativo">Inativo</label>
-                
                 <br>
-
             </fieldset>
 
             <button type="submit">Cadastrar Produto</button>
-
-
-
         </form>
     </main>
     <footer>
