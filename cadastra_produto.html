@@ -24,16 +24,16 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Cadastre o seu produto</h1>
-        <form action="" enctype="multipart/form-data">
+    <main class="pag-cadastro-main">
+        <h1 class="pag-cadastro-titulo">Cadastre o seu produto</h1>
+        <form class="form-cadastro-produto" action="" enctype="multipart/form-data">
             <label for="nomeProduto">Nome do Produto:</label>
             <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Ex: Régua Articulada - Preta" maxlength="100" required>
             <br>
 
             <label for="descricaoProduto">Descrição:</label>
             <br>
-            <textarea id="descricaoProduto" name="descricaoProduto" rows="5" placeholder="Detalhes do produto" style="max-width: 500px; max-height: 200px;" required></textarea>
+            <textarea id="descricaoProduto" name="descricaoProduto" rows="5" placeholder="Detalhes do produto" required></textarea>
             <br>
 
             <label for="precoProduto">Preço:</label>
@@ -91,11 +91,44 @@
                 <br>
             </fieldset>
 
-            <button type="submit">Cadastrar Produto</button>
+            <button type="submit" class="btn-cadastrar-produto">Cadastrar Produto</button>
         </form>
     </main>
+
     <footer>
-        <p>&copy; 2025 Lucas Imports. Todos os direitos reservados.</p>
-    </footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="assets/img/favicon1.png" alt="Logo Smart Tools">
+                <h3>SMART TOOLS</h3>
+            </div>
+            <p>Revolucionando a sala de aula com ferramentas inteligentes e de qualidade.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="#mais-vendidos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Onde Comprar</h4>
+            <ul>
+                <li><a href="https://produto.mercadolivre.com.br/MLB-2065813585-compasso-regua-flexivel-para-quadro-escolar-matematica-afins-_JM" target="_blank">Mercado Livre</a></li>
+                <li><a href="https://shopee.com.br/COMPASSO-FLEX%C3%8DVEL-DO-PROFESSOR-COM-VENTOSA-PARA-QUADRO-BRANCO-ESCOLAR-NO-ENSINO-DE-GEOMTRIA-i.427925402.4486714200" target="_blank">Shopee</a></li>
+            </ul>
+        </div>
+        
+        
+    </div>
+    
+    <div class="footer-copy">
+        <p>&copy; 2025 Smart Tools. Todos os direitos reservados.</p>
+    </div>
+</footer>
 </body>
 </html>
