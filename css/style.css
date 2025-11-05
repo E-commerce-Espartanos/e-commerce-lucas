@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root{
+    --cor-primaria: #20A0F1;
+    --cor-secundaria: #F29A1F;
+    --cor-section: #166EA6;
+    --cinza-claro: #F8F8F8;
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+button{
+    cursor: pointer;
+    width: 250px;
+    padding: 15px 10px;
+    border-radius: 20px;
+}
+
+
+/* HEADER */
+
+header{
+    padding:  5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--cor-primaria);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 2px solid #F29A1F;
+    z-index: 3;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 500px;
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    position: relative;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+    transition: width 0.4s ease-out; 
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+
+/* SECTION */
+
+.welcome{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+.content{
+    flex: 2;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--cor-primaria);
+
+}
+
+.content h2{
+    font-size: 30px;
+    position: relative;
+}
+
+.content h2::before{
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    border-radius: 10px;
+    left: 0;
+    width: 250px;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+    z-index: -1;
+}
+
+.content p {
+    text-align: justify;
+    width:80% ;
+    font-size: 22px;
+}
+
+#btn-welcome{
+    border: 2px solid #20A0F1;
+    background-color: var(--cinza-claro);
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: var(--cor-secundaria);
+    font-size: 14px;
+    transition: color 0.4s ease;
+}
+
+#btn-welcome span {
+    position: relative;
+    z-index: 3; 
+}
+
+#btn-welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--cor-secundaria); 
+    z-index: 2; 
+    transition: width 0.4s ease-out; 
+}
+
+#btn-welcome:hover::before {
+    width: 100%;
+}
+
+#btn-welcome:hover {
+    color: #000; 
+}
+
+.imagem-welcome img{
+    flex: 1;
+    border-radius: 5px;
+    margin-right: 70px;
+    width: 350px;
+    height: 400px;
+    transition: 0.5s;
+}
+
+/* mais vendidos */
+
+.mais-vendidos{
+    background-color: var(--cor-section);
+    height: 100vh;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    color: var(--cinza-claro);
+}
+
+.mais-vendidos h2{
+    font-size: 25px;
+    margin-bottom: 2em;
+}
+
+.vendidos-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards-produtos{
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #F29A1F;
+    border-radius: 5px;
+    line-height: 2em;
+}
+
+.cards-produtos a{
+    color: #000;
+}
+.cards-produtos p a{
+    margin-left: 10px;
+}
+
+
+.produto-preco{
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+.cards-produtos img{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#btn-vendidos{
+    margin: 15px auto;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+}
+
+/* SOBRE */
+
+.sobre{
+    height: 100vh;
+    width: 100%;
+    padding: 30px 30px;
+
+}
+
+.sobre h2{
+    color: var(--cor-primaria);
+    font-size: 25px; 
+}
+.sobre-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.sobre-content p{
+    max-width: 500px;
+    font-size: 20px; 
+}
+
+.sobre-content img{
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    border: 2px solid #F29A1F;
+}
+
+#btn-sobre{
+    border: 2px solid #20A0F1;
+    color: #F29A1F;
+    font-weight: 700;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+#btn-sobre span {
+    position: relative;
+    z-index: 3; 
+}
+
+#btn-sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--cor-secundaria); 
+    z-index: 2; 
+    transition: width 0.4s ease-out; 
+}
+
+#btn-sobre:hover::before {
+    width: 100%;
+}
+
+#btn-sobre:hover {
+    color: #000; 
+}
+
+/* nos encontrar */
+
+.nos-encontrar{
+    background-color: var(--cor-section);
+    height: 100vh;
+    width: 100%;
+    padding: 30px 30px;
+}
+
+.nos-encontrar h2{
+    font-size: 25px;
+    color: #fff;
+}
+
+.sites{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    gap: 20px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+.cards a{
+    color: #fff;
+}
+
+.cards-header{
+    display: flex;
+    align-items: center;
+}
+
+.cards-header img{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+.card-content img{
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    border: 2px solid #F29A1F;
+}
+
+/* CONTATO */
+
+.contato {
+    height: 100vh;
+    width: 100%;
+    padding: 30px 30px;
+    background-color: var(--cinza-claro);
+}
+
+.contato h2 {
+    color: var(--cor-primaria);
+    font-size: 25px;
+    margin-bottom: 2em;
+}
+
+.contato-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    height: 80%;
+}
+
+.contato-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-item {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-left: 4px solid var(--cor-secundaria);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+}
+
+.info-item h3 {
+    color: var(--cor-primaria);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    color: #333;
+    font-size: 16px;
+}
+
+.contato-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.contato-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 15px;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+}
+
+.contato-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#btn-contato {
+    border: 2px solid var(--cor-primaria);
+    background-color: transparent;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    transition: color 0.4s ease;
+}
+
+#btn-contato span {
+    position: relative;
+    z-index: 3;
+}
+
+#btn-contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    z-index: 2;
+    transition: width 0.4s ease-out;
+}
+
+#btn-contato:hover::before {
+    width: 100%;
+}
+
+#btn-contato:hover {
+    color: #000;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--cor-section);
+    color: #fff;
+    padding: 40px 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.footer-logo h3 {
+    font-size: 20px;
+    color: var(--cor-secundaria);
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: var(--cinza-claro);
+}
+
+.footer-section h4 {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--cinza-claro);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-section ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-secundaria);
+    transition: width 0.3s ease-out;
+}
+
+.footer-section ul li a:hover {
+    color: var(--cor-secundaria);
+}
+
+.footer-section ul li a:hover::before {
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    color: var(--cinza-claro);
+    transition: color 0.3s ease;
+    position: relative;
+    width: fit-content;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-secundaria);
+    transition: width 0.3s ease-out;
+}
+
+.social-links a:hover {
+    color: var(--cor-secundaria);
+}
+
+.social-links a:hover::before {
+    width: 100%;
+}
+
+.footer-copy {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff48;
+}
+
+.footer-copy p {
+    color: var(--cinza-claro);
+    font-size: 14px;
+}
