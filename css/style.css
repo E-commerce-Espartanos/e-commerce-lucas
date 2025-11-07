@@ -1214,7 +1214,7 @@ footer {
 }
 
 
-.sac-faq-content h4 {
+.sac-faq-content h4, strong {
     color: var(--cor-secundaria);
     font-size: 16px;
     margin-top: 15px;
@@ -1749,7 +1749,8 @@ footer {
     }
 
     .content h2::before {
-        width: 120px;
+        width: 100px;
+        bottom: -2px;
     }
 
     .content p {
