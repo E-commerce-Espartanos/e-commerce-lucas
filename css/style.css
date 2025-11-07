@@ -1169,3 +1169,86 @@ footer {
         padding: 15px;
     }
 }
+
+/* Criar conta e Login*/
+
+
+.inputForm {
+  margin-bottom: 7px;
+  padding: auto;
+}
+
+.textoLogin {
+  font-size: 3em;
+  margin-bottom: 1em;
+  display: block;
+  text-align: center;
+}
+.main-regis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.form-regis {
+  background: white;
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 60, 255, 0.473);
+  width: 600px; /* largura dobrada */
+  height: 500px; /* altura dobrada */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 2px solid var(--cor-primaria);
+  border-radius: 10px;
+}
+.input-regis {
+  display: block;
+  width: 100%;
+  padding: 1em 0.5em; /* aumenta altura interna */
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.button-regis {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  border-radius: 3px;
+  background-color: #1880ff;
+  color: white;
+  font-size: 1em;
+  transition: all 0.3s ease-out;
+}
+.button-regis:hover {
+  background-color: #0159c4;
+  transition: all 0.5s ease;
+  font-size: 1.2rem;
+}
+
+.email,
+.password {
+  padding: 100px;
+}
+
+.cadastrar {
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.linkcadastro {
+  margin-left: 5px;
+  color: blue;
+  text-decoration: none;
+}
+
+.textoLogin2 {
+  font-size: 3em;
+  margin-bottom: 0.1em;
+  display: block;
+  text-align: center;
+}
