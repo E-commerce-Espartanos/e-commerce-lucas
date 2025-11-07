@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página de Produto e Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Estilos de Layout e Fundo */
+        body {
+            background-color: #007bff; /* Azul de fundo */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; Removido para permitir o conteúdo fluir verticalmente */
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 0; /* Adiciona padding vertical para o conteúdo não colar nas bordas */
+        }
+        .main-container {
+            width: 100%;
+            max-width: 900px; /* Largura máxima para a página inteira */
+            /* Garante que o main-container esteja centralizado */
+            margin: 0 auto; 
+        }
+
+        /* Estilo da Seção do Produto (Card) */
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px; /* Espaço entre o produto e o formulário */
+            padding: 20px;
+        }
+        .product-title {
+            color: #007bff;
+            font-weight: bold;
+            padding-bottom: 5px;
+            border-bottom: 3px solid #f0ad4e; /* Linha laranja */
+            display: inline-block; /* Garante que a linha laranja pegue apenas o tamanho do texto */
+            margin-bottom: 15px;
+        }
+        .rating-stars .fa-star {
+            color: #ffc107; /* Estrelas em amarelo */
+        }
+        .product-image-wrapper {
+            /* Adicionado um wrapper para a imagem para melhor controle do espaço */
+            text-align: left; /* Garante que a imagem comece na esquerda */
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            /* display: block; // Pode ser útil se houver algum espaçamento extra */
+        }
+
+        /* Estilo do Formulário */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px; /* Largura menor para o formulário */
+            margin: 0 auto; /* Centraliza o formulário dentro do main-container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f0ad4e; /* Linha laranja sob o título */
+            margin-bottom: 25px;
+        }
+        .form-control-light {
+             background-color: #f8f9fa;
+        }
+
+        /* 🟡 CUSTOMIZAÇÃO DA COR AMARELA PARA INPUTS ATIVOS (FOCO) 🟡 */
+        .form-control:focus {
+            border-color: #ffc107; 
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+        .form-check-input:checked {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        .form-check-input:checked[type="checkbox"] {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+        }
+        .form-check-input:checked[type="radio"] {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23212529'/%3e%3c/svg%3e");
+        }
+        .btn-light {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #212529;
+            font-weight: bold;
+        }
+        .btn-light:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+            color: #212529;
+        }
+        .btn-light:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <div class="product-image-wrapper"> 
+                        <p class="small text-muted mb-1">+ de 750 vendidos</p>
+                        <div class="rating-stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            </i> <span class="small text-muted">(543)</span>
+                        </div>
+                        
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_687771-MLB90560500891_082025-F-marcador-quadro-branco-recarregavel-v-board-master-un-pilot.webp" 
+                             class="img-fluid product-image" 
+                             alt="Imagem do Produto" style="width: 100px;">
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <h2 class="product-title">Marcador para Quadros Brancos</h2>
+                    <p class="text-secondary">
+                        Marcador para quadros brancos, com tinta líquida. Ideal para usar em quadros e outras superfícies não
+          porosas. </p>
+                </div>
+            <h2 class="form-title">O QUE ACHOU DO NOSSO PRODUTO</h2>
+
+            <form>
+                <div class="d-flex justify-content-around mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="chegouBem">
+                        <label class="form-check-label" for="chegouBem">chegou bem?</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="chegouRapido" checked>
+                        <label class="form-check-label" for="chegouRapido">Chegou rápido?</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <p class="mb-2">Deseja receber E-mail de promoções?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="receberPromocoes" id="promocoesSim" value="Sim">
+                        <label class="form-check-label" for="promocoesSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="receberPromocoes" id="promocoesNao" value="Não" checked>
+                        <label class="form-check-label" for="promocoesNao">Não</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <p class="mb-2">Você é um Profissional da Educação?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="profissionalEducacao" id="educacaoSim" value="Sim" checked>
+                        <label class="form-check-label" for="educacaoSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="profissionalEducacao" id="educacaoNao" value="Não">
+                        <label class="form-check-label" for="educacaoNao">Não</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="descricao" class="form-label text-muted">Comentário:</label>
+                    <input type="text" class="form-control form-control-light" id="descricao" placeholder="Deixe seu comentario...">
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-light btn-lg">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

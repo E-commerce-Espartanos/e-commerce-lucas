@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root{
+    --cor-primaria: #20A0F1;
+    --cor-secundaria: #F29A1F;
+    --cor-section: #166EA6;
+    --cinza-claro: #F8F8F8;
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* HEADER */
+
+header{
+    padding:  5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--cor-primaria);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 2px solid #F29A1F;
+    z-index: 3;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 500px;
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    position: relative;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+    transition: width 0.4s ease-out; 
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+/*produto*/
+
+.avaliacao{
+    display:flex;
+    list-style-type: none;
+}
+
+.star-icon{
+  list-style-type:none; 
+}
+
+.star-icon_ativo::before{
+  /*estrela VAZIA */
+  content:"\2606"; 
+}
+.star-icon::before{
+    /*estrela cheia*/
+  content:"\2605";
+  color:#ffe500;
+}
+
+
+
+
