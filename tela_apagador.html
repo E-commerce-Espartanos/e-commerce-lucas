@@ -1,0 +1,292 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Capacidades do Claude</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .card.active {
+            border: 3px solid #667eea;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .icon.blue { background: #dbeafe; }
+        .icon.purple { background: #f3e8ff; }
+        .icon.green { background: #d1fae5; }
+        .icon.orange { background: #fed7aa; }
+        .icon.yellow { background: #fef3c7; }
+        .icon.pink { background: #fce7f3; }
+        .icon.indigo { background: #e0e7ff; }
+        .icon.red { background: #fee2e2; }
+
+        .card h3 {
+            font-size: 1.4em;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .example {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .example.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .example strong {
+            color: #374151;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .example p {
+            font-size: 0.9em;
+            color: #4b5563;
+        }
+
+        .footer {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .footer h3 {
+            font-size: 1.5em;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>O que eu posso fazer? 🚀</h1>
+            <p>Clique em cada card para ver exemplos de uso</p>
+        </div>
+
+        <div class="grid">
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon blue">🔍</div>
+                    <h3>Busca na Web</h3>
+                </div>
+                <p>Busco informações atualizadas na internet para responder perguntas sobre eventos recentes, notícias e dados em tempo real.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Quais são as últimas notícias sobre IA no Brasil? Qual o clima hoje em São Paulo?</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon purple">💻</div>
+                    <h3>Programação</h3>
+                </div>
+                <p>Crio código em diversas linguagens, depuro erros, explico conceitos técnicos e construo aplicações completas.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Criar um jogo em Python, debugar código JavaScript, ou construir uma API REST.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon green">🧠</div>
+                    <h3>Análise & Raciocínio</h3>
+                </div>
+                <p>Resolvo problemas complexos, analiso dados, faço cálculos avançados e explico conceitos difíceis de forma clara.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Analisar um dataset CSV, resolver equações, ou explicar física quântica de forma simples.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon orange">📝</div>
+                    <h3>Criação de Conteúdo</h3>
+                </div>
+                <p>Escrevo textos criativos, profissionais ou técnicos - desde emails até histórias completas.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Escrever um conto de ficção científica, criar um relatório profissional ou redigir um email formal.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon yellow">💡</div>
+                    <h3>Brainstorming & Ideias</h3>
+                </div>
+                <p>Gero ideias criativas, ajudo no planejamento de projetos e sugiro soluções inovadoras.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Ideias para um negócio, planejar uma viagem, ou nomear um produto novo.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon pink">🌍</div>
+                    <h3>Múltiplos Idiomas</h3>
+                </div>
+                <p>Converso fluentemente em diversos idiomas e posso traduzir ou adaptar conteúdo entre eles.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Traduzir documentos técnicos, conversar em português, inglês, espanhol e mais.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon indigo">🔢</div>
+                    <h3>Matemática & Lógica</h3>
+                </div>
+                <p>Resolvo problemas matemáticos, desde aritmética básica até cálculo e estatística avançada.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Calcular juros compostos, resolver integrais, ou analisar probabilidades.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <div class="icon red">⚡</div>
+                    <h3>Artefatos Interativos</h3>
+                </div>
+                <p>Crio aplicações web interativas, visualizações de dados, jogos e ferramentas úteis que você pode usar diretamente.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong>
+                    <p>Calculadoras personalizadas, dashboards, jogos simples, ou ferramentas de produtividade.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>Pronto para começar?</h3>
+            <p>Experimente me pedir qualquer coisa dos exemplos acima, ou combine várias capacidades em uma única solicitação!</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            const example = card.querySelector('.example');
+            const wasActive = card.classList.contains('active');
+            
+            // Remove active de todos os cards
+            document.querySelectorAll('.card').forEach(c => {
+                c.classList.remove('active');
+                c.querySelector('.example').classList.remove('show');
+            });
+            
+            // Se não estava ativo, ativa este
+            if (!wasActive) {
+                card.classList.add('active');
+                example.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html> -->
