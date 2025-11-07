@@ -107,7 +107,7 @@ nav ul li a:hover::before {
 
 .content{
     flex: 2;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,44 +136,11 @@ nav ul li a:hover::before {
     text-align: justify;
     width:80% ;
     font-size: 22px;
+    color: #000;
+    line-height: 40px;
 }
 
-#btn-welcome{
-    border: 2px solid #20A0F1;
-    background-color: var(--cinza-claro);
-    font-weight: 700;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    color: var(--cor-secundaria);
-    font-size: 14px;
-    transition: color 0.4s ease;
-}
 
-#btn-welcome span {
-    position: relative;
-    z-index: 3; 
-}
-
-#btn-welcome::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: var(--cor-secundaria); 
-    z-index: 2; 
-    transition: width 0.4s ease-out; 
-}
-
-#btn-welcome:hover::before {
-    width: 100%;
-}
-
-#btn-welcome:hover {
-    color: #000; 
-}
 
 .imagem-welcome img{
     flex: 1;
@@ -233,10 +200,11 @@ nav ul li a:hover::before {
     border-radius: 10px;
 }
 
-#btn-vendidos{
-    margin: 15px auto;
-    font-weight: 700;
-    color: var(--cor-secundaria);
+.btn-vendidos{
+    background-color: transparent;
+    border: 1px solid #20A0F1;
+    font-weight: 600;
+    background-color: var(--cor-primaria);
 }
 
 /* SOBRE */
