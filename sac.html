@@ -9,22 +9,28 @@
   <body>
     <header>
       <div class="logo">
-        <img
-          src="assets/img/favicon1.png"
-          alt="Logo - Duas reguas fazendo um X, das cores laranja e azul"
-        />
-        <h1><a href="index.html">SMART TOOLS </a></h1>
+        <img src="assets/img/favicon1.png" alt="Logo - Duas reguas fazendo um X, das cores laranja e azul">
+        <h1><a href="index.html">SMART TOOLS</a></h1>
       </div>
-
-      <nav>
+      
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="navMenu">
         <ul>
-          <li><a href="#mais-vendidos">PRODUTOS</a></li>
-          <li><a href="sobre.html">SOBRE NÓS</a></li>
-          <li><a href="#contato">CONTATO</a></li>
-          <li><a href="login.html" target="_blank">LOGIN</a></li>
+          <li><a href="index.html#mais-vendidos">PRODUTOS</a></li>
+          <li><a href="index.html#sobre">SOBRE NÓS</a></li>
+          <li><a href="sac.html">SAC</a></li>
+          <li><a href="login.html">LOGIN</a></li>
         </ul>
       </nav>
     </header>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+
 
     <main class="pag-sac-main">
         <!-- Seção de Busca -->
@@ -221,110 +227,7 @@
         <p>&copy; 2025 Smart Tools. Todos os direitos reservados.</p>
     </div>
 </footer>
-    <!-- <form class="search-form">
-      <label for="faq-search" class="visually-hidden"></label>
-      <input
-        type="search"
-        id="faq-search"
-        name="search"
-        placeholder="Oque deseja encontrar ?"
-        class="pesquisar"
-      />
-      <button type="submit">Buscar</button>
-    </form>
+        <script src="js/script.js"></script>
 
-    <h1 class="titulo">
-      Aqui estamos na central de atendimento ao cliente <br />
-      Como podemos ajudar?
-    </h1>
-
-    <div class="sumario-container">
-      <details class="sumario-item">
-        <summary>
-          Oque esses produtos me oferecem de diferente do convencional
-        </summary>
-
-        <p>
-          Regua flexivel: Alem de poder ser usada como uma regua padrão, ela
-          tambem pode ser usada para traçar linhas curvas Tambem por ser
-          flexivel, ela tambem pode ser guardada com muito mais eficiencia e
-          facilidade dentro de locais pequenos
-          <br />
-          Canetão: Usar uma caneta de lousa é melhor que o giz por ser mais
-          limpo, não causar alergias, permitir uma escrita mais visível e
-          confortável, e ser mais prático para apagar. Enquanto o giz gera
-          poeira que pode causar problemas respiratórios e sujeira, a caneta usa
-          tinta que desliza suavemente e apaga facilmente com um apagador ou
-          pano.
-          <br />
-          Apagador: Possui uma base mais confortavel e macia, e alem disso,
-          tambem nao deixa residuo de sujeira depois de ser utilizado Adesivo de
-          lousa: caso voce queira apresentar algum rascunho, ou tambem queira
-          proteger sua parece de seus filhos, voce pode usar esse adesivo
-          incrivelmente resistente para que nao precise apagar sua lousa depois,
-          e ainda vai continuar com suas anotações anteriores
-        </p>
-      </details>
-
-      <details class="sumario-item">
-        <summary>Como utilizar?</summary>
-        <p></p>
-      </details>
-
-      <details class="sumario-item">
-        <summary>Onde usar?</summary>
-        <p></p>
-      </details>
-
-      <details class="sumario-item">
-        <summary>compra e entrega</summary>
-        <p></p>
-      </details>
-
-      <details class="sumario-item">
-        <summary>Pós vendas</summary>
-        <p></p>
-      </details>
-    </div>
-
-    <br />
-    <div class="Ia-container">
-      <form action="/enviar-ajuda" method="post" class="contato-form">
-        <fieldset>
-          <legend>Enviar dúvidas</legend>
-
-          <div class="form-grupo">
-            <label for="Pergunta">Sua pergunta:</label>
-            <textarea
-              id="Pergunta"
-              name="Pergunta"
-              rows="5"
-              required
-            ></textarea>
-          </div>
-
-          <div class="form-grupo">
-            <label for="Nome">Nome:</label>
-            <input type="text" id="Nome" name="Nome" required />
-          </div>
-
-          <div class="form-grupo">
-            <label for="Email">Email:</label>
-            <input type="email" id="Email" name="Email" required />
-          </div>
-
-          <div class="form-grupo">
-            <label for="Numero">Número (com DDD):</label>
-            <input type="tel" id="Numero" name="Numero" required />
-          </div>
-
-          <button type="submit">Enviar pergunta</button>
-        </fieldset>
-      </form>
-
-      <br />
-
-      
-    </div> -->
   </body>
 </html>

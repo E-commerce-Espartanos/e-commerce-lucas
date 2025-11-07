@@ -9,20 +9,28 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/img/favicon1.png" alt="Logo - Duas reguas fazendo um X, das cores laranja e azul">
-            <h1><a href="index.html" target="_blank">SMART TOOLS </a></h1>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html#mais-vendidos" target="_blank">PRODUTOS</a></li>
-                <li><a href="index.html#sobre" target="_blank">SOBRE NÓS</a></li>
-                <li><a href="index.html#contato "target="_blank">CONTATO</a></li>
-                <li><a href="login.html" target="_blank">LOGIN</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="assets/img/favicon1.png" alt="Logo - Duas reguas fazendo um X, das cores laranja e azul">
+        <h1><a href="index.html">SMART TOOLS</a></h1>
+      </div>
+      
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html#mais-vendidos">PRODUTOS</a></li>
+          <li><a href="index.html#sobre">SOBRE NÓS</a></li>
+          <li><a href="sac.html">SAC</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+        </ul>
+      </nav>
     </header>
+    <div class="menu-overlay" id="menuOverlay"></div>
+    
 
     <main class="pag-cadastro-main">
         <h1 class="pag-cadastro-titulo">Cadastre o seu produto</h1>
@@ -130,5 +138,8 @@
         <p>&copy; 2025 Smart Tools. Todos os direitos reservados.</p>
     </div>
 </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

@@ -10,21 +10,29 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/img/favicon1.png" alt="Logo - Duas reguas fazendo um X, das cores laranja e azul">
-            <h1><a href="index.html">SMART TOOLS</a></h1>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#">PRODUTOS</a></li>
-                <li><a href="sobre.html" target="_blank">SOBRE NÓS</a></li>
-                <li><a href="index.html#contato">CONTATO</a></li>
-                <li><a href="cadastro.html" target="_blank">CADASTRO</a></li>
-                
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="assets/img/favicon1.png" alt="Logo - Duas reguas fazendo um X, das cores laranja e azul">
+        <h1><a href="index.html">SMART TOOLS</a></h1>
+      </div>
+      
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html#mais-vendidos">PRODUTOS</a></li>
+          <li><a href="index.html#sobre">SOBRE NÓS</a></li>
+          <li><a href="sac.html">SAC</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+        </ul>
+      </nav>
     </header>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+
 
     <main class="main-regis">
         <div class="formulario">
@@ -40,5 +48,8 @@
         </div>
     </main>
 </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

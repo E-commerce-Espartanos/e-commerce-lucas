@@ -34,8 +34,8 @@ a{
 
 /* HEADER */
 
-header{
-    padding:  5px 15px;
+header {
+    padding: 5px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,40 +45,88 @@ header{
     top: 0;
     background-color: #fff;
     border-bottom: 2px solid #F29A1F;
-    z-index: 3;
+    z-index: 1000;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     font-size: 13px;
-
+    z-index: 1001;
 }
 
-.logo img{
+.logo img {
     width: 80px;
     height: 80px;
 }
 
-nav ul{
+.logo h1 {
+    margin: 0;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--cor-primaria);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+    background-color: var(--cor-secundaria);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+    background-color: var(--cor-secundaria);
+}
+
+/* NAVEGAÇÃO */
+nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     width: 500px;
+    margin: 0;
 }
 
-nav ul li{
+nav ul li {
     margin-right: 20px;
 }
 
-nav ul li a{
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
     text-decoration: none;
     color: var(--cor-primaria);
     font-weight: 600;
     position: relative;
+    padding: 5px 0;
 }
 
-nav ul li a::before{
+nav ul li a::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -86,15 +134,151 @@ nav ul li a::before{
     width: 0%;
     height: 3px;
     background-color: var(--cor-secundaria);
-    transition: width 0.4s ease-out; 
+    transition: width 0.4s ease-out;
 }
 
 nav ul li a:hover::before {
     width: 100%;
 }
 
+/* RESPONSIVIDADE TABLET */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
 
-/* SECTION */
+    .logo {
+        font-size: 11px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul {
+        width: 400px;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 640px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s ease;
+        padding-top: 100px;
+        z-index: 999;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 0 30px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid var(--cinza-claro);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 20px 0;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a::before {
+        bottom: 10px;
+    }
+
+    nav ul li a:hover {
+        color: var(--cor-secundaria);
+        padding-left: 10px;
+    }
+
+    /* Overlay para fechar menu */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 8px 15px;
+    }
+
+    .logo {
+        font-size: 10px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo h1 {
+        font-size: 14px;
+    }
+
+    nav {
+        width: 250px;
+    }
+
+    nav ul {
+        padding: 0 20px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        padding: 18px 0;
+    }
+}
+
+
+
+/* SECTION - INDEX*/
 
 .welcome{
     height: 100vh;
@@ -151,7 +335,7 @@ nav ul li a:hover::before {
     transition: 0.5s;
 }
 
-/* mais vendidos */
+/* mais vendidos - INDEX */
 
 .mais-vendidos{
     background-color: var(--cor-section);
@@ -207,7 +391,7 @@ nav ul li a:hover::before {
     background-color: var(--cor-primaria);
 }
 
-/* SOBRE */
+/* SOBRE - INDEX */
 
 .sobre{
     height: 100vh;
@@ -277,7 +461,7 @@ nav ul li a:hover::before {
     color: #000; 
 }
 
-/* nos encontrar */
+/* nos encontrar - INDEX */
 
 .nos-encontrar{
     background-color: var(--cor-section);
@@ -331,7 +515,7 @@ nav ul li a:hover::before {
     border: 2px solid #F29A1F;
 }
 
-/* CONTATO */
+/* CONTATO - INDEX */
 
 .contato {
     height: 100vh;
@@ -454,7 +638,7 @@ nav ul li a:hover::before {
     color: #000;
 }
 
-/* FOOTER */
+/* FOOTER - INDEX*/
 
 footer {
     background-color: var(--cor-section);
@@ -794,6 +978,8 @@ footer {
     color: var(--cinza-claro);
     font-size: 14px;
 }
+
+/* RESPONISIVIDADE - CADASTRO DO PRODUTO */
 
 @media (max-width: 768px) {
     .form-cadastro-produto {
